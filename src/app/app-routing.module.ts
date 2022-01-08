@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
+    // component: LoginComponent,
   },
   // {
   //   path: 'page',
@@ -24,7 +25,7 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: 'login' },
+  { path: '**', redirectTo: 'dashboard' },
 ];
 
 @NgModule({

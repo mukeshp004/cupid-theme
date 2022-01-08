@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NGXLogger } from 'ngx-logger';
+import { MessageBusService } from './../shared/services/message-bus.service';
 
 @Component({
   selector: 'app-layout',
@@ -6,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent implements OnInit {
-  constructor() {}
+  isSidebarCollapse = false;
+  isSidebarCompact = false;
 
-  ngOnInit(): void {}
+  constructor(
+    private logger: NGXLogger,
+    private messageBus: MessageBusService
+  ) {}
+
+  ngOnInit(): void {
+    this.registerListeners();
+  }
+
+  /**
+   * Register all the event
+   */
+  registerListeners(): void {}
 }

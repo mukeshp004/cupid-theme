@@ -1,16 +1,17 @@
 <div class="wrapper">
-  <aside class="left-sidebar">
-    <a class="navbar-brand" href="#"> <b>Patel</b> Shop</a>
-  </aside>
-  <section class="main-content flex flex-col flex-auto w-full min-w-0">
-    <header class="top-bar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid"></div>
-      </nav>
-    </header>
-    <!--  end of header  -->
-  </section>
-  <router-outlet></router-outlet>
+  <!-- Header start -->
+  <app-header></app-header>
+  <!-- Header end -->
+
+  <div id="middle-wrapper">
+    <!-- Side bar start -->
+    <app-sidebar></app-sidebar>
+    <!-- Side bar end -->
+
+    <section id="main-wrapper">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
 
   <aside class="right-sidebar"></aside>
   <aside class="customizer"></aside>
